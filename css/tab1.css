@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/*CSSのみでで作るタブ
+---------------------------------------------------------------------------*/
+/*tabの全体枠*/
+.tab {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 100%;
+	background: #efefef;
+	border: 1px solid #ccc;
+	height: auto;
+}
+
+/*inputを非表示にする*/
+.input {
+  position: absolute;
+  opacity: 0; }
+
+/*tabボタン部分*/
+.tab-label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7f7f7f;
+  margin-bottom: 0;
+  transition: background 0.1s, color 0.1s; }
+
+.tab-label:hover {
+  background: #d8d8d8; }
+
+.tab-label:active {
+  background: #ccc; }
+
+.input:checked + .tab-label {
+	background-color: #CECECE;
+	color: #000;
+}
+.input:checked + .tab-label.touhoku-label {
+	background-color: #4AAE60;
+	color: #FFFFFF;
+}
+.input:checked + .tab-label.kantou-label {
+	background-color: #CA2238;
+	color: #FFFFFF;
+}
+.input:checked + .tab-label.chuubu-label {
+	background-color: #ED8A33;
+	color: #FFFFFF;
+}
+.input:checked + .tab-label.hokuriku-label {
+	background-color: #FFD000;
+	color: #FFFFFF;
+}
+.input:checked + .tab-label.kansai-label {
+	background-color: #99C43A;
+	color: #FFFFFF;
+}
+.input:checked + .tab-label.shikoku-label {
+	background-color: #0177B6;
+	color: #FFFFFF;
+}
+.input:checked + .tab-label.kyuusyuu-label {
+	background-color: #1CBAEA;
+	color: #FFFFFF;
+}
+.input:checked + .tab-label.chugoku-label {
+	background-color: #E8809F;
+	color: #FFFFFF;
+}
+
+.cp_actab .bg-touhoku {
+	background-color: #4aae60;
+}
+
+.cp_actab .bg-chuubu {
+	background-color: #ED8A33;
+}
+.cp_actab .bg-hokuriku {
+	background-color: #FFD000;
+}
+.cp_actab .bg-kansai {
+	background-color: #99C43A;
+}
+.cp_actab .bg-chugoku {
+	background-color: #E8809F;
+}
+.cp_actab .bg-shikoku {
+	background-color: #0177B6;
+}
+.cp_actab .bg-kyuusyuu {
+	background-color: #1CBAEA;
+}
+
+.width100 {
+	max-width: 1070px;
+}
+.cp_actab .bg-kantou {
+	background-color: #CA2238;
+}
+
+@media (min-width: 600px) {
+  .tab-label {
+	width: 50%;
+} 
+
+}
+/*tabの本文エリア*/
+.tab-panel {
+	display: none;
+	padding-top: 20px;
+	padding-right: 30px;
+	padding-left: 30px;
+	/* [disabled]padding-bottom: 20px; */
+	background-color: #FFFFFF;
+	color: #666666;
+	width: 100%;
+}
+
+@media (min-width: 600px) {
+  .tab-panel {
+    order: 99; } }
+.input:checked + .tab-label + .tab-panel {
+  display: block; }
+
+/*その他
+---------------------------------------------------------------------------*/
+.u-mb-20 {
+  margin: 0 0 20px 0; }
+
+.content {
+	max-width: none;
+	margin: 20px auto 40px;
+	/* [disabled]padding-top: 10px; */
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
